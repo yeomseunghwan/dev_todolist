@@ -1,0 +1,148 @@
+/* 폰트 */
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 영역 */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 바디 영역 */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(to left top, #faffd1, #a1ffce);
+}
+
+/* 감싸주는 영역 */
+#wrapper {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.025);
+  padding: 35px 40px;
+  width: 500px;
+}
+
+/* input 제목 영역 */
+.input_title h1 {
+  margin-bottom: 30px;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  color: #64cb95;
+}
+
+/* 입력 박스 내용 */
+.input_addBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  padding: 10px;
+  margin: 0px auto;
+  border: 4px dashed #40ffb5;
+  border-radius: 5px;
+
+}
+
+/* input박스 정렬 */
+#input_box {
+  border: none;
+  outline: none;
+  width: 350px;
+  margin-right: 4px;
+  padding: 0px;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #40ffb5;
+}
+
+/* 버튼 활성화 */
+.title_addBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex; /* 버튼 내부 아이템을 정렬할 수 있게 설정 */
+  align-items: center; /* 버튼 내부 아이템을 세로로 가운데 정렬 */
+  justify-content: center;
+}
+
+/* input안 img버튼 */
+.title_addBtn img {
+  display: inline;
+  margin-left: 70px;
+  width: 24px; /* 버튼 이미지 크기 조정 */
+  height: 24px;
+  color: red;
+  cursor: pointer; /* 커서 모양 변경 */
+
+}
+
+/* input 마우스 이벤트 */
+.input_addBtn input:focus,
+.input_addBtn button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* ul 추가 메뉴 */
+#list_menu {
+  box-sizing:border-box;
+  margin-top: 5px;
+  list-style: none;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* ul li 추가 메뉴 */
+#list_menu li {
+  display:block;
+  text-align:center;
+  border: 3px solid #40ffb5;
+  border-radius: 5px;
+  width: 380px;
+  margin-top: 20px;
+  padding: 10px 0px;
+  user-select: none;
+}
+
+/* ul li 버튼 */
+#list_menu button {
+  display:block;
+  background: url("../img/check_circle.png") no-repeat;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 0;
+}
+
+/* li안 span */
+#list_menu span {
+  display: flex;
+  align-items: center; /* 텍스트와 버튼 정렬 */
+  font-family: 'Nunito Sans', sans-serif;
+  color: #050505;
+  padding-left: 10px;
+}
