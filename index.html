@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="app.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>TodoList</title>
   </head>
   <body>
@@ -16,16 +19,20 @@
       </div>
       <!-- 데이터 날짜 js 구현 -->
       <!-- input 버튼 영역 -->
-      <form action="#" method="GET" class="input_addBtn">
-        <input type="text" id="input_box" placeholder="할 일 추가" />
+      <div class="input_addBtn">
+        <input type="text" id="input_box" placeholder="할 일 추가"/>
         <!-- input add추가 영역 -->
         <button class="title_addBtn" type="button">
-          <img src="./img/add_circle.png" alt="add_circle" />
+          <span class="material-symbols-outlined addBtn"> add_circle </span>
+          <!-- 아이콘 -->
         </button>
-      </form>
+      </div>
       <!-- 할일 영역 -->
-      <ul id="list_menu"></ul>
+      <ul id="list_menu"> 
+      </ul>
       <!-- 추가 수정 js 구현 -->
+</span>
     </div>
   </body>
+  <script src="./app.js"></script>
 </html>

@@ -19,6 +19,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
 }
 
 /* 바디 영역 */
@@ -27,7 +28,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 100vh;
   margin: 0 auto;
   background: linear-gradient(to left top, #faffd1, #a1ffce);
@@ -41,6 +42,9 @@ body {
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.025);
   padding: 35px 40px;
   width: 500px;
+  height: 80vh;
+  flex-wrap:wrap;
+  overflow:auto;
 }
 
 /* input 제목 영역 */
@@ -57,19 +61,20 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  max-width: 700px;
   height: 50px;
   padding: 10px;
   margin: 0px auto;
   border: 4px dashed #40ffb5;
   border-radius: 5px;
-
+  box-sizing: border-box;
 }
 
 /* input박스 정렬 */
 #input_box {
   border: none;
   outline: none;
-  width: 350px;
+  width: 70%;
   margin-right: 4px;
   padding: 0px;
   font-size: 14px;
@@ -79,23 +84,24 @@ body {
 
 /* 버튼 활성화 */
 .title_addBtn {
+  flex: 0 0 auto;
   background-color: transparent;
   border: none;
   cursor: pointer;
   display: flex; /* 버튼 내부 아이템을 정렬할 수 있게 설정 */
   align-items: center; /* 버튼 내부 아이템을 세로로 가운데 정렬 */
   justify-content: center;
+  
 }
 
 /* input안 img버튼 */
-.title_addBtn img {
+.addBtn {
   display: inline;
   margin-left: 70px;
   width: 24px; /* 버튼 이미지 크기 조정 */
   height: 24px;
-  color: red;
+  color: #40ffb5;
   cursor: pointer; /* 커서 모양 변경 */
-
 }
 
 /* input 마우스 이벤트 */
@@ -107,7 +113,7 @@ body {
 
 /* ul 추가 메뉴 */
 #list_menu {
-  box-sizing:border-box;
+  box-sizing: border-box;
   margin-top: 5px;
   list-style: none;
   margin: 0px auto;
@@ -116,8 +122,10 @@ body {
 
 /* ul li 추가 메뉴 */
 #list_menu li {
-  display:block;
-  text-align:center;
+  /* 플렉스 사용해보기 */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
   border: 3px solid #40ffb5;
   border-radius: 5px;
   width: 380px;
@@ -127,22 +135,33 @@ body {
 }
 
 /* ul li 버튼 */
-#list_menu button {
-  display:block;
-  background: url("../img/check_circle.png") no-repeat;
-  border: none;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  margin: 0 10px;
-  padding: 0;
-}
-
-/* li안 span */
-#list_menu span {
-  display: flex;
-  align-items: center; /* 텍스트와 버튼 정렬 */
-  font-family: 'Nunito Sans', sans-serif;
-  color: #050505;
+.addCheck_Btn {
+  color: #40ffb5;
   padding-left: 10px;
 }
+
+.addCheck_Btn:hover {
+  /* color: red; */
+  /* transition: 0.5s; */
+  box-shadow: none;
+  outline: none;
+}
+
+.addDelete_Btn {
+  color: #40ffb5;
+  padding: 0px 3px;
+}
+
+.EditCheck_Btn {
+  color: #40ffb5;
+}
+
+.EditClose_Btn {
+  color: #40ffb5;
+}
+
+li > input {
+  border: none;
+  outline: none;
+}
+
